@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A6081E801C000DD300ABF840 /* ButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6081E7F1C000DD300ABF840 /* ButtonContainer.swift */; };
-		A6081E821C00A51000ABF840 /* DigitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6081E811C00A51000ABF840 /* DigitButton.swift */; };
 		A6081E841C0307BC00ABF840 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6081E831C0307BC00ABF840 /* CalculatorModel.swift */; };
 		A696A81B1BFEBD6900D9D832 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A696A81A1BFEBD6900D9D832 /* BackgroundView.swift */; };
 		A696A81D1BFF11A500D9D832 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A696A81C1BFF11A500D9D832 /* ButtonView.swift */; };
@@ -22,7 +21,6 @@
 
 /* Begin PBXFileReference section */
 		A6081E7F1C000DD300ABF840 /* ButtonContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonContainer.swift; sourceTree = "<group>"; };
-		A6081E811C00A51000ABF840 /* DigitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitButton.swift; sourceTree = "<group>"; };
 		A6081E831C0307BC00ABF840 /* CalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		A696A81A1BFEBD6900D9D832 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = CalculatorTest/BackgroundView.swift; sourceTree = "<group>"; };
 		A696A81C1BFF11A500D9D832 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonView.swift; path = CalculatorTest/ButtonView.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				A696A81A1BFEBD6900D9D832 /* BackgroundView.swift */,
 				A6081E7F1C000DD300ABF840 /* ButtonContainer.swift */,
 				A696A81C1BFF11A500D9D832 /* ButtonView.swift */,
-				A6081E811C00A51000ABF840 /* DigitButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -186,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A696A81B1BFEBD6900D9D832 /* BackgroundView.swift in Sources */,
-				A6081E821C00A51000ABF840 /* DigitButton.swift in Sources */,
 				A6D59DD41BF76F8200DF3579 /* CalculatorViewController.swift in Sources */,
 				A6081E801C000DD300ABF840 /* ButtonContainer.swift in Sources */,
 				A696A81D1BFF11A500D9D832 /* ButtonView.swift in Sources */,
