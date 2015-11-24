@@ -13,7 +13,7 @@
 
 #Code sample
 > This part of code is the Calculator's main part, numbers are stored in two arrays: numbers and operand, calculation append or remove elements when situation siuts.
-```
+
     private var operandStack = [String]() //store + - × ÷
     private var operatorStack = [Double]() //store digits
 
@@ -31,7 +31,6 @@
     //perform calculator when there are enough numbers in the stack
     //return tuple: result for dispaly after finish calculate; flag indecate perform one calculate, when flag is false, result is useless so set it to 0.0
     func appendOperand(operand: String) -> (result: Double, flag: Bool)
-```
 
 #How to use
 > 0.9 + 10.9 = 11.0
