@@ -1,27 +1,273 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2Ao-tw-6gm">
     <dependencies>
         <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Calculator View Controller-->
+        <scene sceneID="xeh-cX-0fb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculatorTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Ao-tw-6gm" customClass="CalculatorViewController" customModule="CalculatorTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="uYO-X1-fQb"/>
+                        <viewControllerLayoutGuide type="bottom" id="eC0-bc-25A"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="aeT-13-ltL" customClass="BackgroundView" customModule="CalculatorTest" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rs3-0e-45b" customClass="ButtonContainer" customModule="CalculatorTest" customModuleProvider="target">
+                                <rect key="frame" x="-25" y="-25" width="650" height="650"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFE-Wz-gm2" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="287" y="347" width="57" height="59"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="Oaq-RW-0tk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6d-kg-901" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="217" y="258" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="btnColor">
+                                                <color key="value" red="0.98302091999999996" green="1" blue="0.52007948859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="mP2-Vk-tlN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dw-jF-qDc" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="430" y="264" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="4BA-cb-cb7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QA9-24-gVO" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="233" y="331" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="BXF-dm-m0w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDa-QW-Dux" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="267" y="198" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="hAG-TP-vPN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKu-Xp-Jzi" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="425" y="379" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="oJH-dM-dP6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vac-Ob-2D3" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="357" y="191" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="1Rt-68-4PC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cu-VW-3uo" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="93" y="323" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="oMp-aM-Km1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hc-KF-wy9" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="187" y="448" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="Bjw-od-AJE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4n-Qq-Xnf" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="326" y="465" width="57" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="hJo-hO-Qim"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLF-dO-YuF" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="570" y="265" width="57" height="57"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="÷">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="operation:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="rvi-md-bXa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDA-R6-3tc" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="456" y="94" width="57" height="57"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="×">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="operation:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="Dbf-R1-2Oh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="str-gL-mcz" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="119" y="162" width="57" height="57"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="operation:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="12L-hb-F5A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20e-wI-HdJ" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="267" y="60" width="57" height="57"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="−">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="operation:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="RkB-Dy-3Do"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsX-d1-De5" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="570" y="330" width="57" height="57"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="operation:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="RkE-Xy-nmB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fI-Sx-4LC" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="570" y="395" width="57" height="57"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearDisplay:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="QAC-Nf-aV9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-aL-M0V" customClass="ButtonView" customModule="CalculatorTest" customModuleProvider="target">
+                                        <rect key="frame" x="570" y="566" width="57" height="57"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title=".">
+                                            <color key="titleColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="digitButtonClick:" destination="2Ao-tw-6gm" eventType="touchUpInside" id="m3x-vC-2EA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="650" id="2Lu-js-ljT"/>
+                                    <constraint firstAttribute="width" constant="650" id="lph-Bk-5xV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="btnColor">
+                                        <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U24-7E-7qv">
+                                <rect key="frame" x="32" y="8" width="536" height="66"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="bGy-6A-Ajj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U24-7E-7qv" firstAttribute="leading" secondItem="aeT-13-ltL" secondAttribute="leadingMargin" constant="12" id="RaS-wy-NQf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U24-7E-7qv" secondAttribute="trailing" constant="12" id="SCU-82-WGq"/>
+                            <constraint firstItem="U24-7E-7qv" firstAttribute="top" secondItem="uYO-X1-fQb" secondAttribute="bottom" constant="-12" id="US9-3B-V2P"/>
+                            <constraint firstItem="Rs3-0e-45b" firstAttribute="centerX" secondItem="aeT-13-ltL" secondAttribute="centerX" id="dPl-Mf-qSw"/>
+                            <constraint firstItem="Rs3-0e-45b" firstAttribute="centerY" secondItem="aeT-13-ltL" secondAttribute="centerY" id="jxa-MS-qke"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="1" green="0.76805845679999996" blue="0.78720406170000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.13351728260000001" green="0.1234460376" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="display" destination="U24-7E-7qv" id="kaF-8W-7l0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZh-Uz-ZNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="321" y="271"/>
         </scene>
     </scenes>
 </document>
