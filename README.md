@@ -33,7 +33,8 @@
     func appendOperand(operand: String) -> (result: Double, flag: Bool)
 
 #How to use
-> 0.9 + 10.9 = 11.0
+
+> 0.9 + 10.9 = 11.0  
 > 10 + 10 + 20 = 40
 
 #Have a good day:)
